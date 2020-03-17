@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+
 export function addFeature(feature){
     return {
         type: 'ADD_FEATURE',

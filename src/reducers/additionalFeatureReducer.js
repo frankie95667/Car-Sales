@@ -11,7 +11,9 @@ const initialState = [
             return [
                 ...state,
                 action.payload
-            ]
+            ].sort((first, second) => {
+                return first.id - second.id;
+            })
         case 'REMOVE_ADDITIONAL_FEATURE':
             return state.filter(feature => feature.id !== action.payload)
         default:
